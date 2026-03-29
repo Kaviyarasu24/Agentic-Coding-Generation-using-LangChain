@@ -18,7 +18,53 @@ This project is an interactive coding agent that generates production-ready Reac
    ```bash
    python app.py
    ```
+
 3. Follow the CLI prompts to describe the app you want.
+
+## Example
+
+**Sample Input:**
+
+```
+Describe the app you want: create a simple calculator
+```
+
+**Sample Output:**
+
+The following files will be generated in the `generated_project/` folder:
+
+- `metadata.json` — Project metadata
+- `index.html` — Main HTML file
+- `index.tsx` — React entry point
+- `App.tsx` — Main app component
+- `components/Calculator.tsx` — Calculator UI and logic
+
+**Example: `generated_project/metadata.json`**
+
+```
+{
+   "name": "Simple Calculator",
+   "description": "A responsive calculator application built with React and TypeScript."
+}
+```
+
+**Example: `generated_project/App.tsx`**
+
+```tsx
+import React from 'react';
+import Calculator from './components/Calculator';
+
+const App: React.FC = () => {
+   return (
+      <div className="flex flex-col items-center justify-center h-full">
+         <h1 className="text-2xl font-bold mb-4">Simple Calculator</h1>
+         <Calculator />
+      </div>
+   );
+};
+
+export default App;
+```
 
 ## Project Structure
 - `app.py` — Main agent code
