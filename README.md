@@ -26,11 +26,19 @@ This project is an interactive coding agent that generates production-ready Reac
 - Generated projects are saved in the `generated_project/` folder
 
 ## Environment Variables
-- `OPENROUTER_API_KEY` — Set in `app.py` (replace with your own for production)
+- `OPENROUTER_API_KEY` — Set in a `.env` file in the project root. The app uses `python-dotenv` to load this key automatically.
 
-## Notes
+
+## Additional Notes
 - All generated React code uses TypeScript and Tailwind CSS only.
 - The agent expects clear, concise app descriptions for best results.
+- The project now requires `python-dotenv` (see requirements.txt).
+
+### Example .env file
+
+```
+OPENROUTER_API_KEY=your_openrouter_api_key_here
+```
 
 ---
 

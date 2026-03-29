@@ -1,13 +1,18 @@
+
 import os
 import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv()
+
 # --------------------------------------
 # API KEY
 # --------------------------------------
 
-os.environ["OPENROUTER_API_KEY"] = "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"
+# The API key is now loaded from the .env file
 
 # --------------------------------------
 # Imports
